@@ -20,3 +20,6 @@ Route::get('/welcome', function (){
 Route::get('/about', function (){
     return view('blog');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
