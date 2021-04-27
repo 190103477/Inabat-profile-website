@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>Create new form</title>
 
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -18,8 +18,13 @@
         <![endif]-->
     </head>
     <body>
-    
-{{ $posts }}
+        <form method="Post" action="{{ route('add-post') }}">
+        @csrf
+        <input type="text" name="title" placeholder="title">
+        <input type="text" name="body" placeholder="body">
+        <button type="submit">Create</button>
+        </form>
+
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JavaScript -->

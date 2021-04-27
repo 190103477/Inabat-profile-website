@@ -36,5 +36,10 @@ Route::get('/post', function(){
     $post = Post::find(1);
     return $post->title;
 });
-Route::get('blog', [BlogControllel::class, 'index']);
 
+Route::get('blog', [BlogControllel::class, 'index']);    // laboratory work 5
+Route::get('blog/create', function(){
+    return view('blog.create');
+});
+
+Route::post('blog/create', [BlogControllel::class, 'store'])->name('add-post');  //laboratory work 5
